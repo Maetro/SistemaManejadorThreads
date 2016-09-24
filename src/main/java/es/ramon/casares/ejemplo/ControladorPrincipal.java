@@ -31,11 +31,11 @@ public class ControladorPrincipal {
     /** The sistema manejador threads manager. */
     private static SistemaManejadorThreadsManager sistemaManejadorThreadsManager;
 
-    @RequestMapping("/ejecutar")
+    @RequestMapping("/")
     public void ejecutarPrueba() {
 
-        final int numeroTareas = 10000; // this.configuracion.getNumeroTareas();
-        final int numeroEjecuciones = 10000; // this.configuracion.getNumeroIteraciones();
+        final int numeroTareas = this.configuracion.getNumeroTareas();
+        final int numeroEjecuciones = this.configuracion.getNumeroIteraciones();
 
         ControladorPrincipal.sistemaManejadorThreadsManager = new SistemaManejadorThreadsManager(THREADS_CONEXION,
                 numeroTareas,

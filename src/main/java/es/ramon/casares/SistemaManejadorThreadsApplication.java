@@ -12,9 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import es.ramon.casares.ejemplo.ControladorPrincipal;
-
-@SpringBootApplication(scanBasePackages = { "es.ramon.casares" })
+@SpringBootApplication
 public class SistemaManejadorThreadsApplication {
 
     /** The logger. */
@@ -24,10 +22,6 @@ public class SistemaManejadorThreadsApplication {
 
         logger.info("Arrancando aplicacion");
         final ApplicationContext ctx = SpringApplication.run(SistemaManejadorThreadsApplication.class, args);
-
-        final ControladorPrincipal controlador = new ControladorPrincipal();
-
-        controlador.ejecutarPrueba();
 
     }
 }
